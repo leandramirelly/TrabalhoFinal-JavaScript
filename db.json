@@ -1,0 +1,20 @@
+{
+  "produtos": [
+    { "img": "img/img10.jpeg", "title": "Vestido Preto", "description": "Tamanhos: P M G", "value": 89.99, "id": 1 },
+    { "img": "img/img4.jpeg", "title": "Conjunto Verde e Branco", "description": "Tamanhos: P M G", "value": 95.99, "id": 2 },
+    { "img": "img/img7.jpeg", "title": "Vestido Vermelho", "description": "Tamanhos: P M G", "value": 99.99, "id": 3 },
+    { "img": "img/img1.jpeg", "title": "Conjunto Verde Lima", "description": "Tamanhos: P M G", "value": 47.99, "id": 4 },
+    { "img": "img/img14.jpeg", "title": "Conjunto Verde e Branco", "description": "Tamanhos: PP P M GG", "value": 95.99, "id": 5 },
+    { "img": "img/img9.jpeg", "title": "Conjunto Laranja", "description": "Tamanhos: M G GG", "value": 60.00, "id": 6 },
+    { "img": "img/img13.jpeg", "title": "Conjunto Preto", "description": "Tamanhos: PP M G", "value": 47.99, "id": 7 },
+    { "img": "img/img2.jpeg", "title": "Vestido Verde", "description": "Tamanhos: P M G", "value": 47.99, "id": 8 },
+    { "img": "img/img12.jpeg", "title": "Vestido Azul Claro", "description": "Tamanhos: M G GG", "value": 60.00, "id": 9 },
+    { "img": "img/img3.jpeg", "title": "Vestido C/Fenda Vermelha", "description": "Tamanhos: P M G", "value": 85.00, "id": 10 },
+    { "img": "img/img6.jpeg", "title": "Conjunto Vermelho e Branco", "description": "Tamanhos: M G GG", "value": 90.00, "id": 11 },
+    { "img": "img/img8.jpeg", "title": "Conjunto Verde e Branco", "description": "Tamanhos: PP M G", "value": 85.00, "id": 12 },
+    { "img": "img/img11.jpeg", "title": "Vestido C/Fenda Branco", "description": "Tamanhos: P M G", "value": 100.00, "id": 13 },
+    { "img": "img/img15.jpeg", "title": "Conjunto Branco", "description": "Tamanhos: PP P M GG", "value": 90.00, "id": 14 },
+    { "img": "img/img16.jpeg", "title": "Vestido Rose Brilhante", "description": "Tamanhos: M G GG", "value": 120.00, "id": 15 },
+    { "img": "img/img17.jpeg", "title": "Macacão Longo Branco", "description": "Tamanhos: PP M G", "value": 110.00, "id": 16 }
+  ]
+}

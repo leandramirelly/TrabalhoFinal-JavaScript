@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="produto-detalhe"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const produtoId = parseInt(params.get('id'));
+            const detalhesContainer = document.getElementById('produto-detalhe');
+
+            function carregarDetalhesDoProduto() {
+                fetch('http://localhost:3000/produtos/' + produtoId)
+                    .then(response => response.json())
+                    .then(produto => {
+                        if (!produto) {
+                            detalhesContainer.innerHTML = '<p>Produto não encontrado.</p>';
+                            return;
+                        }
+                        detalhesContainer.innerHTML = `
+                            <img src="${produto.img}" alt="${produto.title}" width="200">
+                            <h2>${produto.title}</h2>
+                            <p>${produto.description}</p>
+                            <p>Preço: ${produto.value}</p>
+                            <button id="adicionar-carrinho">Adicionar ao Carrinho</button>
+                        `;
+                        document.getElementById('adicionar-carrinho').addEventListener('click', function() {
+                            adicionarAoCarrinho(produto);
+                        });
+                    })
+                    .catch(error => {
+                        detalhesContainer.innerHTML = '<p>Erro ao carregar detalhes do produto.</p>';
+                        console.error(error);
+                    });
+            }
+
+            function adicionarAoCarrinho(produto) {
+                const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+                carrinho.push(produto);
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            }
+
+            carregarDetalhesDoProduto();
+        });
+    </script>
+</body>
+</html>

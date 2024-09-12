@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+        <link rel = "stylesheet" href = "css/stylecarrinho.css"/>
+        <title>Meu Carrinho</title>
+</head>
+<body>
+    <main>
+        <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top" style="border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);">
+                <div class = "container">
+                <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                    <img src = "img/bolsa.png" alt = "site icon">
+                    <span class = "text-uppercase fw-lighter ms-2">Carrinho</span>
+                </a>
+            </div>
+        </nav>
+        <br><br><br><br><br><br>
+
+    <style>
+    .param {
+        margin-bottom: 7px;
+        line-height: 1.4;
+    }
+
+    .param-inline dt {
+        display: inline-block;
+    }
+
+    .param dt {
+        margin: 0;
+        margin-right: 7px;
+        font-weight: 600;
+    }
+
+    .param-inline dd {
+        vertical-align: baseline;
+        display: inline-block;
+    }
+
+    .param dd {
+        margin: 0;
+        vertical-align: baseline;
+    }
+
+    .shopping-cart-wrap .price {
+        color: #007bff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 5px;
+        display: block;
+    }
+    var {
+        font-style: normal;
+    }
+
+    .media img {
+        margin-right: 1rem;
+    }
+
+    .img-sm {
+        width: 90px;
+        max-height: 75px;
+        object-fit: cover;
+    }
+    </style>
+    <body class="bg-secondary-subtle">
+        <br><br><br><br>
+        <nav-bar bg="danger"></nav-bar>
+        <div class="container mt-4">
+            <div class="card">
+                <table class="table table-hover shopping-cart-wrap">
+                    <thead class="text-muted">
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col" width="120">Quantidade</th>
+                            <th scope="col" width="120">Preço</th>
+                            <th scope="col" width="200" class="text-right">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="produtos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            document.getElementById('produtos').innerHTML = "";
+
+            for (let item of carrinho) {
+                getData(item.id, item.quantidade);
+            }
+
+            function getData(id, quantidade) {
+                fetch(`http://localhost:3000/produtos/${id}`)
+                    .then(response => response.json())
+                    .then(data => renderizar(data, quantidade));
+            }
+
+            function renderizar(response, quantidade) {
+                document.getElementById('produtos').innerHTML += `
+                    <tr>
+                        <td>
+                            <figure class="media">
+                                <div class="img-wrap"><img src="${response.img}" class="img-thumbnail img-sm"></div>
+                                <figcaption class="media-body">
+                                    <h6 class="title text-truncate">${response.title}</h6>
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <input type="number" value="${quantidade}" min="1" max="10" class="form-control" onchange="alterarQuantidade(this, ${response.id})">
+                        </td>
+                        <td>
+                            <div class="price-wrap">
+                                <var class="price">R$ ${(response.value * quantidade).toFixed(2)}</var>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <button class="btn btn-outline-danger" onclick="remover(${response.id})">Remover</button>
+                        </td>
+                    </tr>
+                `;
+            }
+
+            function alterarQuantidade(el, id) {
+                carrinho.map(item => {
+                    if (item.id == id) {
+                        item.quantidade = Number(el.value);
+                    }
+                });
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                location.reload();
+            }
+
+            function remover(id) {
+                const index = carrinho.findIndex(item => item.id == id);
+                if (index !== -1) {
+                    carrinho.splice(index, 1);
+                    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                    location.reload();
+                }
+            }
+        </script>
+    <br><br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</main>
+</body>
+</html>
+</body>
+</html>

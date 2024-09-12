@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel = "stylesheet" href = "css/stylecolecao.css">
+        <script src="card.js"></script>
+        <title>Coleção</title>
+</head>
+<body>
+    <main>
+        <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+            <div class = "container">
+                <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                    <img src = "img/bolsa.png" alt = "site icon">
+                    <span class = "text-uppercase fw-lighter ms-2">G&L</span>
+                </a>
+    
+                <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                    <span class = "navbar-toggler-icon"></span>
+                </button>
+    
+                <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                    <ul class = "navbar-nav mx-auto text-center">
+                        <li class = "nav-item px-2 py-2">
+                            <a class = "nav-link text-uppercase text-dark" href = "#conjuntos">Conjuntos</a>
+                        </li>
+                        <li class = "nav-item px-2 py-2">
+                            <a class = "nav-link text-uppercase text-dark" href = "#vestidos">Vestidos</a>
+                        </li>
+                        <li class = "nav-item px-2 py-2">
+                            <a class = "nav-link text-uppercase text-dark" href = "#natal">Natal</a>
+                        </li>
+                        <li class = "nav-item px-2 py-2 border-0">
+                            <a class = "nav-link text-uppercase text-dark" href = "#anonovo">Ano Novo</a>
+                        </li>
+                        <li class = "nav-item px-2 py-2">
+                            <a class = "nav-link text-uppercase text-dark" href = "">Cores</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br><br><br><br>
+
+        <section id = "novidades" class = "py-5">
+            <div class = "container" id="conjuntos">
+                <div class = "title text-center">
+                    <h2 class = "position-relative d-inline-block">Conjuntos</h2>
+                </div>
+            </div>
+            <br><br>
+            <div class="container" id="cards" style="display: flex; gap: 20px;">
+                <card-item img="img/img1.jpeg" title="Conjunto Verde Lima" description="Tamanhos: P M G" value="$47,99" id="1"></card-item>
+                
+                <card-item img="img/img14.jpeg" title="Conjunto Verde e Branco" description="Tamanhos: PP P M GG" value="$95,99" id="14"></card-item>
+
+                <card-item img="img/img9.jpeg" title="Conjunto Laranja" description="Tamanhos: M G GG" value="$60,00" id="9"></card-item>
+
+                <card-item img="img/img13.jpeg" title="Conjunto Preto" description="Tamanhos: PP  M G" value="$47,99" id="13"></card-item>
+            </div>
+
+        </section>
+        <section id = "novidades" class = "py-5">
+            <div class = "container" id="vestidos">
+                <div class = "title text-center">
+                    <h2 class = "position-relative d-inline-block">Vestidos</h2>
+                </div>
+            </div>
+            <br><br>
+            <div class="container" id="cards" style="display: flex; gap: 20px;">
+                <card-item img="img/img2.jpeg" title="Vestido Verde" description="Tamanhos: P M G" value="$47,99" id="2"></card-item>
+                
+                <card-item img="img/img7.jpeg" title="Vestido Vermelho" description="Tamanhos:PP P M GG" value="$99,99" id="7"></card-item>
+
+                <card-item img="img/img12.jpeg" title="Vestido Azul Claro" description="Tamanhos:  M G GG" value="$60,00" id="12"></card-item>
+
+                <card-item img="img/img10.jpeg" title="Vestido Preto" description="Tamanhos: PP  M G" value="$47,99" id="10"></card-item>
+            </div>
+
+        </section>
+        <section id = "novidades" class = "py-5">
+            <div class = "container" id="natal">
+                <div class = "title text-center">
+                    <h2 class = "position-relative d-inline-block">Natal</h2>
+                </div>
+            </div>
+            <br><br>
+            <div class="container" id="cards" style="display: flex; gap: 20px;">
+                <card-item img="img/img3.jpeg" title="Vestido C/Fenda Vermelha" description="Tamanhos: P M G" value="$85,00" id="3"></card-item>
+                
+                <card-item img="img/img4.jpeg" title="Conjunto Verde e Branco" description="Tamanhos:PP P M GG" value="$80,00" id="4"></card-item>
+
+                <card-item img="img/img6.jpeg" title="Conjunto Vermelho e Branco" description="Tamanhos:  M G GG" value="$90,00" id="6"></card-item>
+
+                <card-item img="img/img8.jpeg" title="Conjunto Branco e Verde" description="Tamanho: PP  M G" value="$85,00" id="8"></card-item>
+            </div>
+        </section>
+        <section id = "novidades" class = "py-5">
+            <div class = "container" id="anonovo">
+                <div class = "title text-center">
+                    <h2 class = "position-relative d-inline-block">Ano Novo</h2>
+                </div>
+            </div>
+            <br><br>
+            <div class="container" id="cards" style="display: flex; gap: 20px;">
+                <card-item img="img/img11.jpeg" title="Vestido C/Fenda Branco" description="Tamanhos: P M G" value="$100,00" id="11"></card-item>
+                
+                <card-item img="img/img15.jpeg" title="Conjunto Branco" description="Tamanhos:PP P M GG" value="$90,00" id="15"></card-item>
+
+                <card-item img="img/img16.jpeg" title="Vestido Rose Brilhante" description="Tamanhos:  M G GG" value="$120,00" id="16"></card-item>
+
+                <card-item img="img/img17.jpeg" title="Macacão Longo Branco" description="Tamanhos: PP  M G" value="$110,00" id="17"></card-item>
+            </div>
+        </section>
+
+        <footer class = "bg-dark py-5">
+            <div class = "container">
+                <div class = "row text-white g-4">
+                    <div class = "col-md-6 col-lg-3">
+                        <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">G&L</a>
+                        <p class = "text-white text-muted mt-3">Todos os nossos produtos são de alta qualidade. São dados 3 dias de prazo para devolução de qualquer produto comprado, tendo direito a seu dinheiro de volta. Agradecemos a preferência!</p>
+                    </div>
+    
+                    <div class = "col-md-6 col-lg-3">
+                        <h5 class = "fw-light">Links</h5>
+                        <ul class = "list-unstyled">
+                            <li class = "my-3">
+                                <a href = "#header" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> Início
+                                </a>
+                            </li>
+                            <li class = "my-3">
+                                <a href = "#novidades" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> Novidades
+                                </a>
+                            </li>
+                            <li class = "my-3">
+                                <a href = "#sobre" class = "text-white text-decoration-none text-muted">
+                                    <i class = "fas fa-chevron-right me-1"></i> Sobre nossa loja
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class = "col-md-6 col-lg-3">
+                        <h5 class = "fw-light mb-3">Entre em contato conosco</h5>
+                        <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                            <span class = "me-3">
+                                <i class = "fas fa-map-marked-alt"></i>
+                            </span>
+                            <span class = "fw-light">
+                                Avenida José Almeida, Natal, N° 332, Brazil
+                            </span>
+                        </div>
+                        <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                            <span class = "me-3">
+                                <i class = "fas fa-envelope"></i>
+                            </span>
+                            <span class = "fw-light">
+                                g&lmodaseacessorios@gmail.com
+                            </span>
+                        </div>
+                        <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                            <span class = "me-3">
+                                <i class = "fas fa-phone-alt"></i>
+                            </span>
+                            <span class = "fw-light">
+                                (84) 9 8643-2570
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class = "col-md-6 col-lg-3">
+                        <h5 class = "fw-light mb-3">Nos sigam</h5>
+                        <div>
+                            <ul class = "list-unstyled d-flex">
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                        <i class = "fab fa-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

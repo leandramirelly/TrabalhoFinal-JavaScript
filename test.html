@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Card extends HTMLElement{
+            constructor(){
+                super();
+            }
+
+            connectedCallback(){
+                const div=document.createElement("div");
+                div.className="card";
+                div.innerHTML= `
+                    <img src="${this.getAttribute("img")}" class="card-img-top" alt="${this.getAttribute(title)}">
+                    <div class="card-body">
+                        <h5 class="card-title">${this.getAttribute("title")}</h5>
+                        <h4 class="card-text">${this.getAttribute("dsecription")}</h4>
+                        <h3 class="card-text">${this.getAttribute("value")}</h3>
+                        <a href="carrinho.html" class="btn-success">Adicionar ao carrinho</a>
+                    </div>
+                `;
+                this.appendChild(div);
+            }
+        }
+
+        customElements.define("card-item", Card);
+    </script>
+    <h1>lalalalalalal</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <card-item
+                img="img/img10.jpeg"
+                title="alala"
+                description="jajdjjdjJD"
+                value="$ 200,00">
+            </card-item>
+        </div>
+
+        <div class="col-md-3">
+            <card-item
+                img="img/img10.jpeg"
+                title="alala"
+                description="jajdjjdjJD"
+                value="$ 200,00">
+            </card-item>
+        </div>
+
+        <div class="col-md-3">
+            <card-item
+                img="img/img10.jpeg"
+                title="alala"
+                description="jajdjjdjJD"
+                value="$ 200,00">
+            </card-item>
+        </div>
+
+    </div>
+</body>
+</html>

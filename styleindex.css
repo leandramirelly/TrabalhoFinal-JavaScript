@@ -1,0 +1,102 @@
+:root{
+    --primeira-fonte: 'Kaisei Tokumin', serif;
+    --segunda-fonte: 'Poppins', sans-serif;
+    --cor-link: rgb(255, 208, 0);
+    --pink: #e5345b;
+}
+
+body{
+    font-family: var(--segunda-fonte);
+}
+ 
+/* botão */
+.bg-primary{
+    background-color: var(--pink)!important;
+}
+
+/* nav */
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img{
+    width: 30px;
+}
+
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+
+.nav-link:hover{
+    color: var(--cor-link)!important;
+}
+
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+/* novidades */
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--cor-link);
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.card{
+    background-color: #fff;
+    width: 15rem;
+    border-radius: 12px;
+    height: 27rem;
+}
+
+.card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 50%;
+}
+
+.card h1{
+    font-size: 1.2rem;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+}
+
+.card h3{
+    font-size: .9rem;
+    color: #aaaa;
+}
+
+
+
+/* borda do menu */
+@media(min-width: 992px){
+    .nav-item{
+        border-bottom: none;
+    }
+}
+
+/* carrossel/header */
+#header{
+    background: url(../img/logo\ da\ loja.jpeg) top/cover no-repeat;
+}
+.carousel-inner h1{
+    font-family: var(--lg-font);
+}
+.carousel-item .btn{
+    border-color: #fff!important;
+}
+.carousel-item .btn:hover{
+    border-color: var(--pink)!important;
+}

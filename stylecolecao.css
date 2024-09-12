@@ -1,0 +1,65 @@
+:root{
+    --primeira-fonte: 'Kaisei Tokumin', serif;
+    --segunda-fonte: 'Poppins', sans-serif;
+    --cor-link: rgb(255, 208, 0);
+    --pink: #e5345b;
+}
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--cor-link);
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.active-filter-btn{
+    background-color: var(--pinko)!important;
+    color: #fff!important;
+    border-color: var(--pink)!important;
+}
+.filter-button-group .btn:hover{
+    color: #fff!important;
+}
+.collection-img span{
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+.carousel-caption h5{
+    font-family: var(--segunda-fonte);
+    font-size: 25px;
+}
+
+.carousel-caption h6{
+    font-family: var(--segunda-fonte);
+    font-size: 25px;
+}
+
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img{
+    width: 30px;
+}
+
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+
+.nav-link:hover{
+    color: var(--cor-link)!important;
+}
+
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
